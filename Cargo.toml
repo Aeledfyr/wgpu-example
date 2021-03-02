@@ -1,0 +1,24 @@
+[package]
+name = "wgpu-test"
+version = "0.1.0"
+authors = ["Aeledfyr"]
+edition = "2018"
+
+[dependencies]
+winit = "0.24"
+wgpu = "0.7"
+async-executor = "1.4"
+pollster = "0.2"
+bytemuck = { version = "1.4", features = ["derive"] }
+cgmath = "0.18"
+
+log = "0.4"
+wgpu-subscriber = "0.1"
+tracing = { version = "0.1", default-features = false, features = ["std"] }
+tracing-subscriber = "0.2"
+tracy-client = "0.11"
+tracing-tracy = "0.5"
+
+[features]
+default = []
+tracy = ["tracy-client/enable", "tracing-tracy/enable"]
